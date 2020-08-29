@@ -1,4 +1,4 @@
-# IChat
+# IChat-Android
 A messaging app
 
 Step 1:
