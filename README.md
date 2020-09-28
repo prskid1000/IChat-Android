@@ -1,5 +1,5 @@
 # IChat-Android
-A messaging app
+Android version of IChat messenger.
 
 Step 1:
 Just write a new username.It will automatically create account
