@@ -1,6 +1,7 @@
-package e.prithwirajsamanta.ichat;
+package com.prskid1000.ichat;
 
-import android.app.Activity;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.AsyncTask;
@@ -19,14 +20,16 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Scanner;
 
-public class Choice_Screen extends Activity {
-    @Override
-        public void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_choice__screen);
+public class ChoiceScreen extends AppCompatActivity {
 
-            final String userid=getIntent().getExtras().getString("userid");
-            downloadJSON("http://progwithme.dx.am/app/get_contact.php?userid="+userid,userid);
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_choice_screen);
+        getSupportActionBar().hide();
+
+        final String userid=getIntent().getExtras().getString("userid");
+        downloadJSON("http://progwithme.dx.am/app/get_contact.php?userid="+userid,userid);
 
     }
     private void downloadJSON(final String urlWebService,final String userid) {
@@ -75,21 +78,24 @@ public class Choice_Screen extends Activity {
 
         LinearLayout cl=(LinearLayout) (findViewById(R.id.choice));
         LinearLayout.LayoutParams params=new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-        params.setMargins(10,10,10,10);
+        params.setMargins(200,100,200,10);
         LinearLayout.LayoutParams paramsb=new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-        paramsb.setMargins(10,10,10,10);
+        paramsb.setMargins(300,5,300,10);
 
         final EditText etext = new EditText(this);
         etext.setLayoutParams(params);
+        etext.setTextColor(-1);
+        etext.setHintTextColor(-1);
         etext.setHint("New Contact");
-        etext.setTextSize(21);
+        etext.setTextSize(28);
         cl.addView(etext);
 
         Button btn1=new Button(this);
         btn1.setLayoutParams(paramsb);
-        btn1.setPadding(2,2,2,2);
+        btn1.setPadding(1,1,1,1);
         btn1.setText("Create");
-        btn1.setBackgroundColor(Color.parseColor("#4CAF50"));
+        btn1.setTextColor(-1);
+        btn1.setBackgroundColor(Color.parseColor("#e5335c"));
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -103,45 +109,46 @@ public class Choice_Screen extends Activity {
 
         Scanner sc=new Scanner(result);
         String token=null;
-         while((token=sc.next())!=null){
-                final TextView text = new TextView(this);
-                text.setLayoutParams(params);
-                text.setText(token);
-                text.setBackgroundColor(Color.parseColor("#18641B"));
-                text.setTextSize(24);
-                text.setTextColor(-1);
-                text.setPadding(1, 20, 1, 20);
-                text.setGravity(Gravity.CENTER_HORIZONTAL);
-                text.setClickable(true);
-                text.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Toast toast = Toast.makeText(getApplicationContext(), "Opening Chat for this Contact", Toast.LENGTH_LONG); // initiate the Toast with context, message and duration for the Toast
-                        toast.show();
-                        Bundle dataBundle = new Bundle();
-                        dataBundle.putInt("id", 0);
-                        Intent intent = new Intent(getApplicationContext(), Chat.class);
-                        intent.putExtras(dataBundle);
-                        intent.putExtra("userid",userid);
-                        intent.putExtra("receiver",text.getText().toString());
-                        startActivity(intent);
-                    }
-                });
-                cl.addView(text);
-                Button btn = new Button(this);
-                btn.setText("Delete");
-                btn.setBackgroundColor(Color.parseColor("#4CAF50"));
-                btn.setLayoutParams(paramsb);
-                btn.setPadding(2, 2, 2, 2);
-                btn.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        downloadJSON("http://progwithme.dx.am/app/remove_contact.php?userid="+userid+"&receiver="+text.getText().toString(),userid);
-                        finish();
-                        startActivity(getIntent());
-                    }
-                });
-                cl.addView(btn);
+        while((token=sc.next())!=null){
+            final TextView text = new TextView(this);
+            text.setLayoutParams(params);
+            text.setText(token);
+            text.setBackgroundColor(Color.parseColor("#ee7792"));
+            text.setTextSize(24);
+            text.setTextColor(-1);
+            text.setPadding(1, 20, 1, 20);
+            text.setGravity(Gravity.CENTER_HORIZONTAL);
+            text.setClickable(true);
+            text.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast toast = Toast.makeText(getApplicationContext(), "Opening Chat for this Contact", Toast.LENGTH_LONG); // initiate the Toast with context, message and duration for the Toast
+                    toast.show();
+                    Bundle dataBundle = new Bundle();
+                    dataBundle.putInt("id", 0);
+                    Intent intent = new Intent(getApplicationContext(), Chat.class);
+                    intent.putExtras(dataBundle);
+                    intent.putExtra("userid",userid);
+                    intent.putExtra("receiver",text.getText().toString());
+                    startActivity(intent);
+                }
+            });
+            cl.addView(text);
+            Button btn = new Button(this);
+            btn.setText("Delete");
+            btn.setBackgroundColor(Color.parseColor("#e5335c"));
+            btn.setLayoutParams(paramsb);
+            btn.setTextColor(-1);
+            btn.setPadding(2, 2, 2, 2);
+            btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    downloadJSON("http://progwithme.dx.am/app/remove_contact.php?userid="+userid+"&receiver="+text.getText().toString(),userid);
+                    finish();
+                    startActivity(getIntent());
+                }
+            });
+            cl.addView(btn);
         }
         sc.close();
     }

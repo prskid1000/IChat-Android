@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">IChat</string>
-    <string name="name">enter here</string>
-    <string name="username"> Username</string>
+    <string name="name">Enter here</string>
+    <string name="username">Username</string>
     <string name="login">Login</string>
 </resources>

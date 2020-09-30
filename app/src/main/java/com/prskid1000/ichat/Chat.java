@@ -1,7 +1,7 @@
-package e.prithwirajsamanta.ichat;
+package com.prskid1000.ichat;
 
-import android.app.Activity;
-import android.content.Intent;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -13,7 +13,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -21,30 +20,38 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Scanner;
 
-public class Chat extends Activity {
+public class Chat extends AppCompatActivity {
+
     Handler handler;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
-
+        getSupportActionBar().hide();
 
         LinearLayout cl=(LinearLayout) (findViewById(R.id.chat));
         LinearLayout.LayoutParams params=new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
         LinearLayout.LayoutParams paramsb=new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-        params.setMargins(10,10,10,10);
+        params.setMargins(100,10,100,10);
         params.height=100;
 
         final String userid=getIntent().getExtras().getString("userid");
         final String receiver=getIntent().getExtras().getString("receiver");
 
+        final EditText etext = new EditText(this);
+        etext.setLayoutParams(params);
+        etext.setHint("New Message");
+        etext.setTextSize(18);
+        cl.addView(etext);
+
         Button btn1=new Button(this);
         LinearLayout.LayoutParams paramsb1=new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-        paramsb1.setMargins(10,10,10,10);
+        paramsb1.setMargins(200,5,200,10);
         btn1.setLayoutParams(paramsb1);
-        btn1.setPadding(2,2,2,2);
+        btn1.setPadding(1,1,1,1);
         btn1.setText("Refresh");
-        btn1.setBackgroundColor(Color.parseColor("#4CAF50"));
+        btn1.setTextColor(-1);
+        btn1.setBackgroundColor(Color.parseColor("#e5335c"));
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,17 +62,13 @@ public class Chat extends Activity {
         });
         cl.addView(btn1);
 
-        final EditText etext = new EditText(this);
-        etext.setLayoutParams(params);
-        etext.setHint("New Message");
-        etext.setTextSize(18);
-        cl.addView(etext);
-
         Button btn=new Button(this);
+        paramsb1.setMargins(200,5,200,10);
         btn.setLayoutParams(paramsb1);
-        btn.setPadding(2,2,2,2);
+        btn.setPadding(1,1,1,1);
         btn.setText("Send");
-        btn.setBackgroundColor(Color.parseColor("#4CAF50"));
+        btn.setTextColor(-1);
+        btn.setBackgroundColor(Color.parseColor("#e5335c"));
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -128,7 +131,8 @@ public class Chat extends Activity {
         LinearLayout cl=(LinearLayout) (findViewById(R.id.chat));
         LinearLayout.LayoutParams params=new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
         LinearLayout.LayoutParams paramsb=new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-        params.setMargins(10,10,10,10);
+        params.setMargins(300,10,100,10);
+        paramsb.setMargins(100,10,300,10);
 
         final String userid=getIntent().getExtras().getString("userid");
         final String receiver=getIntent().getExtras().getString("receiver");
@@ -152,21 +156,21 @@ public class Chat extends Activity {
                 text.setLayoutParams(params);
                 text.setText(userid.toUpperCase() + ":\n" + temp.replace('~',' '));
                 text.setTextSize(22);
-                text.setGravity(Gravity.LEFT);
-                text.setBackgroundColor(Color.parseColor("#264204"));
-                text.setTextColor(-1);
+                text.setGravity(Gravity.RIGHT);
+                text.setBackgroundColor(Color.parseColor("#a6f3e3"));
+                text.setTextColor(Color.parseColor("#073128"));
                 text.setClickable(false);
                 cl.addView(text);
             }else{
                 TextView text = new TextView(this);
                 text.setPadding(10, 20, 10, 20);
                 text.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_FLAG_MULTI_LINE);
-                text.setLayoutParams(params);
+                text.setLayoutParams(paramsb);
                 text.setText(receiver.toUpperCase() +":\n" + temp.replace('~',' '));
                 text.setTextSize(22);
-                text.setGravity(Gravity.RIGHT);
-                text.setBackgroundColor(Color.parseColor("#343F23"));
-                text.setTextColor(-1);
+                text.setGravity(Gravity.LEFT);
+                text.setBackgroundColor(Color.parseColor("#b6f3a6"));
+                text.setTextColor(Color.parseColor("#073128"));
                 text.setClickable(false);
                 cl.addView(text);
             }
@@ -174,5 +178,4 @@ public class Chat extends Activity {
 
         sc.close();
     }
-
 }

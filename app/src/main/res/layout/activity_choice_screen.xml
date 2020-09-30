@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#8BC34A"
-    android:backgroundTint="#8BC34A"
-    tools:context=".Choice_Screen">
+    android:background="#F44336"
+    android:backgroundTint="#F44336"
+    tools:context=".ChoiceScreen">
 
     <LinearLayout
         android:id="@+id/choice"
