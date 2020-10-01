@@ -169,7 +169,7 @@ public class Chat extends AppCompatActivity {
                 text.setText(receiver.toUpperCase() +":\n" + temp.replace('~',' '));
                 text.setTextSize(22);
                 text.setGravity(Gravity.LEFT);
-                text.setBackgroundColor(Color.parseColor("#b6f3a6"));
+                text.setBackgroundColor(Color.parseColor("#a6f3bd"));
                 text.setTextColor(Color.parseColor("#073128"));
                 text.setClickable(false);
                 cl.addView(text);
