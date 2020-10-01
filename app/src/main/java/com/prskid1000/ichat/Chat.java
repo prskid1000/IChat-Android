@@ -33,7 +33,7 @@ public class Chat extends AppCompatActivity {
         LinearLayout.LayoutParams params=new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
         LinearLayout.LayoutParams paramsb=new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
         params.setMargins(100,10,100,10);
-        params.height=100;
+        params.height=200;
 
         final String userid=getIntent().getExtras().getString("userid");
         final String receiver=getIntent().getExtras().getString("receiver");
@@ -41,7 +41,7 @@ public class Chat extends AppCompatActivity {
         final EditText etext = new EditText(this);
         etext.setLayoutParams(params);
         etext.setHint("New Message");
-        etext.setTextSize(18);
+        etext.setTextSize(20);
         cl.addView(etext);
 
         Button btn1=new Button(this);
