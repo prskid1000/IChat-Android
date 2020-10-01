@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getSupportActionBar().hide();
 
         if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_NETWORK_STATE) == PackageManager.PERMISSION_DENIED)
         {
@@ -31,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
                     new String[] {Manifest.permission.INTERNET},103);
         }
 
-        getSupportActionBar().hide();
         Button button = (findViewById(R.id.button2));
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
