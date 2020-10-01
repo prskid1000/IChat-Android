@@ -46,6 +46,7 @@ public class ChoiceScreen extends AppCompatActivity {
             protected void onPostExecute(String s) {
                 super.onPostExecute(s);
                 try {
+                    System.out.println("hiiiii"+s+userid);
                     guiBuild(userid,s);
                 } catch (Exception e) {
 
@@ -65,7 +66,7 @@ public class ChoiceScreen extends AppCompatActivity {
                     }
                     return sb.toString().trim();
                 } catch (Exception e) {
-
+                    System.out.println("hiiii"+e.getMessage());
                     return null;
                 }
             }

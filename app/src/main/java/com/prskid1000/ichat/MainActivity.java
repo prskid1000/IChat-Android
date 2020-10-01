@@ -3,6 +3,7 @@ package com.prskid1000.ichat;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.core.content.PermissionChecker;
 
 import android.Manifest;
 import android.content.Intent;
@@ -11,6 +12,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,18 +21,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide();
-
-        if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_NETWORK_STATE) == PackageManager.PERMISSION_DENIED)
-        {
-            ActivityCompat.requestPermissions(MainActivity.this,
-                    new String[] {Manifest.permission.ACCESS_NETWORK_STATE},102);
-        }
-
-        if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.INTERNET) == PackageManager.PERMISSION_DENIED)
-        {
-            ActivityCompat.requestPermissions(MainActivity.this,
-                    new String[] {Manifest.permission.INTERNET},103);
-        }
 
         Button button = (findViewById(R.id.button2));
         button.setOnClickListener(new View.OnClickListener() {
