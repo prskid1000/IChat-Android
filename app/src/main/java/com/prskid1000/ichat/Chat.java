@@ -157,7 +157,7 @@ public class Chat extends AppCompatActivity {
                 text.setText(userid.toUpperCase() + ":\n" + temp.replace('~',' '));
                 text.setTextSize(22);
                 text.setGravity(Gravity.RIGHT);
-                text.setBackgroundColor(Color.parseColor("#a6f3e3"));
+                text.setBackgroundColor(Color.parseColor("#59a49f"));
                 text.setTextColor(Color.parseColor("#073128"));
                 text.setClickable(false);
                 cl.addView(text);
@@ -169,7 +169,7 @@ public class Chat extends AppCompatActivity {
                 text.setText(receiver.toUpperCase() +":\n" + temp.replace('~',' '));
                 text.setTextSize(22);
                 text.setGravity(Gravity.LEFT);
-                text.setBackgroundColor(Color.parseColor("#a6f3bd"));
+                text.setBackgroundColor(Color.parseColor("#5ea459"));
                 text.setTextColor(Color.parseColor("#073128"));
                 text.setClickable(false);
                 cl.addView(text);
