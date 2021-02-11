@@ -1,25 +1,20 @@
 # IChat-Android
 Android version of IChat messenger.
 
-Step 1:
-Just write a new username.It will automatically create account
-
-Step 2:
-Add a contact(username) make sure that contact should have already followed step 1
-
-Step 3:
-Click on the contact name to start messeging. After writing message press send.
-
-Note: Please make sure to press Refresh button as this app does not sync automatically to save data
-
-Emonjis of Google Keyboard are also supported
-
 ## Status
 Repository status([badge](https://img.shields.io/badge/)):
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 ![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)
 ![Version](https://img.shields.io/badge/version-1.0.0-green)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
+
+![1](https://github.com/prskid1000/IChat-Android/blob/master/Preview/1.jpg?raw=true)
+
+![2](https://github.com/prskid1000/IChat-Android/blob/master/Preview/2.jpg?raw=true)
+
+![3](https://github.com/prskid1000/IChat-Android/blob/master/Preview/3.jpg?raw=true)
+
+
 
 ## Getting started
 
