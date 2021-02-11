@@ -8,6 +8,14 @@ Repository status([badge](https://img.shields.io/badge/)):
 ![Version](https://img.shields.io/badge/version-1.0.0-green)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
+![1](https://github.com/prskid1000/IChat-Android/blob/main/Preview/1.jpg?raw=true)
+
+![2](https://github.com/prskid1000/IChat-Android/blob/main/Preview/2.jpg?raw=true)
+
+![3](https://github.com/prskid1000/IChat-Android/blob/main/Preview/3.jpg?raw=true)
+
+
+
 ## Getting started
 
 - Fork the repository.
