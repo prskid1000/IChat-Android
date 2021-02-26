@@ -204,7 +204,8 @@ class Store extends ChangeNotifier {
       wid.add(Card(
         child: ListTile(
             leading: Icon(Icons.all_inclusive, color: Colors.black),
-            title: Text(boxIds[i]),
+            title: Text(boxIds[i],
+                style: TextStyle(fontSize: 20, color: Colors.black)),
             contentPadding: EdgeInsets.fromLTRB(10, 0, 10, 0),
             hoverColor: Colors.greenAccent,
             tileColor: Colors.green[300],
@@ -228,7 +229,8 @@ class Store extends ChangeNotifier {
       wid.add(Card(
         child: ListTile(
             leading: Icon(Icons.all_inclusive, color: Colors.black),
-            title: Text(users[i]),
+            title: Text(users[i],
+                style: TextStyle(fontSize: 20, color: Colors.black)),
             contentPadding: EdgeInsets.fromLTRB(10, 0, 10, 0),
             hoverColor: Colors.greenAccent,
             tileColor: Colors.green[300],
@@ -259,7 +261,8 @@ class Store extends ChangeNotifier {
                       children: <Widget>[
                         Text(
                           this.author[i],
-                          style: TextStyle(fontSize: 18, color: Colors.green),
+                          style: TextStyle(
+                              fontSize: 18, color: Colors.greenAccent),
                         ),
                       ],
                     ),
@@ -291,7 +294,8 @@ class Store extends ChangeNotifier {
                       children: <Widget>[
                         Text(
                           this.author[i],
-                          style: TextStyle(fontSize: 18, color: Colors.green),
+                          style: TextStyle(
+                              fontSize: 18, color: Colors.greenAccent),
                         ),
                       ],
                     ),
@@ -333,7 +337,8 @@ class Account extends StatelessWidget {
                         padding: EdgeInsets.all(10),
                         child: Text(
                           'IChat',
-                          style: TextStyle(fontSize: 36, color: Colors.green),
+                          style: TextStyle(
+                              fontSize: 36, color: Colors.greenAccent),
                         )),
                     Container(
                       padding: EdgeInsets.all(10),
@@ -363,9 +368,10 @@ class Account extends StatelessWidget {
                             width: 190,
                             padding: EdgeInsets.fromLTRB(40, 20, 10, 0),
                             child: RaisedButton(
-                              textColor: Colors.white,
-                              color: Colors.green,
-                              child: Text('Log In'),
+                              textColor: Colors.black,
+                              color: Colors.greenAccent,
+                              child: Text('Log In',
+                                  style: TextStyle(fontSize: 20)),
                               onPressed: () async {
                                 const oneSec = const Duration(seconds: 10);
                                 await store.setAuth(text.text, password.text);
@@ -388,9 +394,10 @@ class Account extends StatelessWidget {
                             width: 160,
                             padding: EdgeInsets.fromLTRB(20, 20, 0, 0),
                             child: RaisedButton(
-                              textColor: Colors.white,
-                              color: Colors.green,
-                              child: Text('Sign Up'),
+                              textColor: Colors.black,
+                              color: Colors.greenAccent,
+                              child: Text('Sign Up',
+                                  style: TextStyle(fontSize: 20)),
                               onPressed: () async {
                                 await store.addUser(text.text, password.text);
                                 const oneSec = const Duration(seconds: 10);
@@ -584,7 +591,7 @@ class Chat extends StatelessWidget {
                             child: InkWell(
                               child: Icon(
                                 Icons.send,
-                                color: Colors.green,
+                                color: Colors.greenAccent,
                                 size: 50,
                               ),
                               onTap: () {

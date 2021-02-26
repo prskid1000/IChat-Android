@@ -14,6 +14,8 @@ Repository status([badge](https://img.shields.io/badge/)):
 
 ![3](https://github.com/prskid1000/IChat-Android/blob/master/Preview/3.jpg?raw=true)
 
+![4](https://github.com/prskid1000/IChat-Android/blob/master/Preview/4.jpg?raw=true)
+
 
 
 ## Getting started
