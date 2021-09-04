@@ -13,8 +13,8 @@ class Chat extends StatelessWidget {
       builder: (context, store, child) {
         return Frame(<Widget>[
           Container(
-            height: height * 0.75,
-            padding: EdgeInsets.fromLTRB(10, 30, 10, 0),
+            height: height * 0.65,
+            padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
             child: ListView(
               children: store.chatBuilder(context),
             ),
