@@ -1,6 +1,8 @@
-import 'package:android_app/layouts/account.dart';
-import 'package:android_app/layouts/home.dart';
-import 'package:android_app/store/store.dart';
+import 'package:IChat/layouts/account.dart';
+import 'package:IChat/layouts/chat.dart';
+import 'package:IChat/layouts/contacts.dart';
+import 'package:IChat/layouts/home.dart';
+import 'package:IChat/store/store.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
@@ -35,7 +37,9 @@ void main() async {
           initialRoute: 'Account',
           routes: {
             'Account': (context) => Account(),
-            'Home': (context) => Home()
+            'Home': (context) => Home(),
+            'Contact': (context) => Contacts(),
+            'Chat': (context) => Chat(),
           },
           debugShowCheckedModeBanner: false,
         );
