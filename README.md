@@ -8,13 +8,21 @@ Repository status([badge](https://img.shields.io/badge/)):
 ![Version](https://img.shields.io/badge/version-1.0.0-green)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-![1](https://github.com/prskid1000/IChat-Android/blob/master/Preview/1.jpg?raw=true)
+![1](https://github.com/prskid1000/IChat-Android/blob/master/Preview/1.png?raw=true)
 
-![2](https://github.com/prskid1000/IChat-Android/blob/master/Preview/2.jpg?raw=true)
+![2](https://github.com/prskid1000/IChat-Android/blob/master/Preview/2.png?raw=true)
 
-![3](https://github.com/prskid1000/IChat-Android/blob/master/Preview/3.jpg?raw=true)
+![3](https://github.com/prskid1000/IChat-Android/blob/master/Preview/3.png?raw=true)
 
-![4](https://github.com/prskid1000/IChat-Android/blob/master/Preview/4.jpg?raw=true)
+![4](https://github.com/prskid1000/IChat-Android/blob/master/Preview/4.png?raw=true)
+
+![1](https://github.com/prskid1000/IChat-Android/blob/master/Preview/5.png?raw=true)
+
+![2](https://github.com/prskid1000/IChat-Android/blob/master/Preview/6.png?raw=true)
+
+![3](https://github.com/prskid1000/IChat-Android/blob/master/Preview/7.png?raw=true)
+
+![4](https://github.com/prskid1000/IChat-Android/blob/master/Preview/8.png?raw=true)
 
 
 
